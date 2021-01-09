@@ -1,0 +1,16 @@
+{
+    "name": "tp/school",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan TANKEU"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
