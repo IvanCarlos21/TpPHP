@@ -20,11 +20,20 @@ class ComposerStaticInit8aef0eef277342b2671e9ce7c3e6c2f8
         ),
     );
 
+    public static $classMap = array (
+        'App\\EtudiantAbstract' => __DIR__ . '/../..' . '/src/EtudiantAbstract.php',
+        'App\\Information' => __DIR__ . '/../..' . '/src/Information.php',
+        'App\\Interfaces\\EtudiantInterfaces' => __DIR__ . '/../..' . '/src/Interfaces/EtudiantInterfaces.php',
+        'App\\Interfaces\\NoteInterfaces' => __DIR__ . '/../..' . '/src/Interfaces/NoteInterfaces.php',
+        'App\\SessionDeClasse' => __DIR__ . '/../..' . '/src/SessionDeClasse.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit8aef0eef277342b2671e9ce7c3e6c2f8::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8aef0eef277342b2671e9ce7c3e6c2f8::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit8aef0eef277342b2671e9ce7c3e6c2f8::$classMap;
 
         }, null, ClassLoader::class);
     }
